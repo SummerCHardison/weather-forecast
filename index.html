@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>weather forecast</title>
+    <link rel="stylesheet" href="./assets/css/style.css" />
+</head>
+
+<body>
+    <header>
+        <h1>Weather Dashboard</h1>
+    </header>
+    <section>
+        <form>
+            <label for="city" id="label">Search for a City:</label>
+            <input name="city" id="city" placeholder="Enter a city name">
+            <div>
+                <button type="submit" id="submit" onclick="getInfo()">Search</button>
+                <div id="recentSearches"></div>
+            </div>
+        </form>
+    </section>
+    
+    <section id="currentDay">
+        <h2 id="cityNameHeader">Loading...</h2>
+        <div id="currentWeather">
+            <div id="currentIconContainer">
+                <div class="icon">
+                    <p id="currentDate"></p>
+                    <p class="weathers" id="current"></p>
+                    <div class="images"><img src="#" class="imgClass" id="img1" alt=""></div>
+                    <p class="temp" id="currentTemp">Loading...</p>
+                    <p class="wind" id="currentWind">Loading...</p>
+                    <p class="humid" id="currentHumid">Loading...</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="fiveDays">
+        <h3>5-Day Forecast:</h3>
+        <div id="fiveDayWeather">
+            <div id="iconsContainer">
+                <div class="icons">
+                    <p id="dayOneDate"></p>
+                    <p class="weathers" id="dayOne"></p>
+                    <div class="images"><img src="#" class="imgClass" id="img2" alt=""></div>
+                    <p class="temp" id="oneTemp">Loading...</p>
+                    <p class="wind" id="oneWind">Loading...</p>
+                    <p class="humid" id="oneHumid">Loading...</p>
+                </div>
+                <div class="icons">
+                    <p id="dayTwoDate"></p>
+                    <p class="weathers" id="dayTwo"></p>
+                    <div class="images"><img src="#" class="imgClass" id="img3" alt=""></div>
+                    <p class="temp" id="twoTemp">Loading...</p>
+                    <p class="wind" id="twoWind">Loading...</p>
+                    <p class="humid" id="twoHumid">Loading...</p>
+                </div>
+                <div class="icons">
+                    <p id="dayThreeDate"></p>
+                    <p class="weathers" id="dayThree"></p>
+                    <div class="images"><img src="#" class="imgClass" id="img4" alt=""></div>
+                    <p class="temp" id="threeTemp">Loading...</p>
+                    <p class="wind" id="threeWind">Loading...</p>
+                    <p class="humid" id="threeHumid">Loading...</p>
+                </div>
+                <div class="icons">
+                    <p id="dayFourDate"></p>
+                    <p class="weathers" id="dayFour"></p>
+                    <div class="images"><img src="#" class="imgClass" id="img5" alt=""></div>
+                    <p class="temp" id="fourTemp">Loading...</p>
+                    <p class="wind" id="fourWind">Loading...</p>
+                    <p class="humid" id="fourHumid">Loading...</p>
+                </div>
+                <div class="icons">
+                    <p id="dayFiveDate"></p>
+                    <p class="weathers" id="dayFive"></p>
+                    <div class="images"><img src="#" class="imgClass" id="img6" alt=""></div>
+                    <p class="temp" id="fiveTemp">Loading...</p>
+                    <p class="wind" id="fiveWind">Loading...</p>
+                    <p class="humid" id="fiveHumid">Loading...</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="./assets/javascript/script.js"></script>
+</body>
+
+</html>
