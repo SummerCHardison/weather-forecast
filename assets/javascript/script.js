@@ -1,5 +1,9 @@
-function getInfo() {
-    preventDefault();
+const submit = document.getElementById('submit');
+
+submit.addEventListener('click', getInfo);
+
+function getInfo(event) {
+    event.preventDefault();
     
     const newName = document.getElementById('city');
     const cityName = document.getElementById('cityNameHeader');
