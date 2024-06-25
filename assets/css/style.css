@@ -1,0 +1,9 @@
+header{
+    background-color: cornflowerblue;
+}
+
+#fiveDays {
+    border: 3px solid black;
+    border-radius: 25px;
+    display: block;
+}
