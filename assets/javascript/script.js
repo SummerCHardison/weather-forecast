@@ -10,7 +10,7 @@ function getInfo(event) {
     const cityName = document.getElementById('cityNameHeader');
     const city = cityValue.value;
     cityName.textContent = city;
-
+    // the above code makes it so that upon clicking the button, the referenced header will display the name of the city the user has searched for
     const requestURL = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=2bd10682d56a268353fe725f24bcb9e8&units=imperial`
 
     fetch(requestURL)
@@ -26,12 +26,14 @@ function getInfo(event) {
         currentHumidity.textContent = 'Humidity: ' + data.list[0].main.humidity;
         const currentWind = document.getElementById('currentWind');
         currentWind.textContent = 'Wind Speed: ' + data.list[0].wind.speed;
-
+        // the above code creates a fetch request to get information from the weather API, then gets and changes some elements to reflect this information.
         const currentIcon = document.getElementById('img1')
         const iconCode1 = data.list[0].weather[0].icon
         const iconURL1 = `https://openweathermap.org/img/wn/${iconCode1}@2x.png`
         currentIcon.src = iconURL1
+         //The above code gets the img element we're changing, the corresponding icon code for the current day, and creates a proper URL with the icon code. It then sets the img's src element to the proper icon url
 
+         // the below code functions the same way the previous two comments have described, repeating the process for the next 5 days.
         const day1Temp = document.getElementById('oneTemp');
         day1Temp.textContent = 'Temp: ' + data.list[1].main.temp;
         const day1Humidity = document.getElementById('oneHumid');
